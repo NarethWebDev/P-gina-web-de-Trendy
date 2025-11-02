@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trendy</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header-main">
+      <nav class="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="/assets/bootstrap-5.3.8-dist/img/logo.png" />
+          </a>
+          <button id="cartBtn" class="btn-cart" aria-label="Carrito de compras">
+            <i class="fas fa-shopping-cart"></i> Carrito
+            <span id="cartBadge" class="badge-cart">0</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero-section">
+      <h1>
+        <i class="fas fa-sparkles"></i> Trendy <i class="fas fa-sparkles"></i>
+      </h1>
+      <h4>Tu tienda de maquillaje premium de confianza</h4>
+      <h2>DESCUBRE NUESTRAS OFERTAS</h2>
+    </section>
+
+    <main class="container py-4">
+      <div class="products-grid" id="productsContainer"></div>
+    </main>
+
+    <!-- MODAL CARRITO -->
+    <div id="cartModal" class="cart-modal d-none">
+      <div class="cart-modal-content">
+        <div class="cart-header">
+          <h3><i class="fas fa-shopping-bag"></i> Mi Carrito</h3>
+          <button id="closeCartBtn" class="btn-close-cart">✕</button>
+        </div>
+
+        <div id="cartItemsContainer" class="cart-items"></div>
+
+        <div id="cartEmpty" class="cart-empty">
+          <i class="fas fa-inbox"></i>
+          <p>Tu carrito está vacío</p>
+        </div>
+
+        <div class="cart-footer">
+          <div class="cart-total">
+            <span>Total:</span>
+            <span id="cartTotalPrice">$0.00</span>
+          </div>
+          <button id="checkoutBtn" class="btn-checkout" disabled>
+            <i class="fas fa-check"></i> Confirmar Compra
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/bootstrap-5.3.8-dist/js/bootstrap.bundle.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
